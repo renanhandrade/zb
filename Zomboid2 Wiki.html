@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zomboid2</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Bungee&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050805;--sf:#0e150e;--tx:#e6eee6;--mu:#9aa89a;--g:#3ddc4a;--bd:#213021;--hf:"Barlow Condensed","Arial Narrow",sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.75 "Source Serif 4",Georgia,serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--bd);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px;padding:12px clamp(16px,4vw,48px)}
+.logo{font:400 1.5rem/1 Bungee,Impact,sans-serif;color:var(--g);text-decoration:none;letter-spacing:.02em}
+nav{display:flex;flex-wrap:wrap;gap:4px 20px;font:600 1.15rem var(--hf)}
+nav a{color:var(--tx);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--g)}nav a[aria-current]{color:var(--g);border-color:var(--g)}
+a:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+main{max-width:1000px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.v{display:none;padding:40px 0 72px}.v.on{display:block}
+.hero{display:grid;place-items:center;aspect-ratio:16/7;min-height:200px;border-radius:6px;background:radial-gradient(ellipse at 50% 0,#5a1d08,#2a0d04 55%,#050805 100%)}
+.hero .logo{font-size:clamp(2.2rem,9vw,5rem)}
+h1,h2,h3,h4,h5{font-family:var(--hf);line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,3rem);color:var(--g);margin:6px 0 12px}
+h2{font-size:clamp(2.2rem,5vw,3.2rem);color:var(--g);margin-bottom:8px}
+h3{font-size:1.9rem;margin:44px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--bd)}
+h4{font-size:1.35rem;color:var(--g);margin:26px 0 6px}h5{font-size:1.15rem;margin:18px 0 2px}
+p{margin:0 0 14px;max-width:70ch}.k{font:600 1.5rem var(--hf);color:var(--g);margin:28px 0 0}
+.lead{color:var(--mu);font-size:1.1rem}
+ul{margin:0 0 14px;padding-left:22px;max-width:70ch}li{margin-bottom:4px}
+blockquote{margin:0 0 12px;padding:6px 16px;border-left:3px solid var(--g);max-width:70ch}
+blockquote b{font:600 1rem var(--hf);color:var(--g);display:block}
+.ex{border:1px dashed var(--bd);padding:10px 14px;color:var(--mu)}
+.idx{list-style:none;padding:0;margin:32px 0 0;max-width:none}.idx li{margin:0;border-top:1px solid var(--bd)}
+.idx a{display:flex;flex-wrap:wrap;gap:2px 20px;align-items:baseline;padding:14px 0;color:var(--tx);text-decoration:none}
+.idx b{font:700 1.6rem var(--hf);color:var(--g);min-width:210px}.idx a:hover b{text-decoration:underline}
+.eq{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px;list-style:none;padding:0;margin:28px 0 0;max-width:none}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;background:var(--sf);border:1px solid var(--bd);color:var(--mu);font:700 2.4rem var(--hf)}
+.eq b{display:block;font:700 1.3rem var(--hf);margin-top:8px}
+.fim{font:700 1.4rem var(--hf);color:var(--g)}
+footer{border-top:1px solid var(--bd);color:var(--mu);font-size:.9rem;padding:20px clamp(16px,4vw,48px)}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style></head><body>
+<header><a class="logo" href="#inicio">ZOMBOID2</a>
+<nav aria-label="Principal"><a href="#inicio" data-v="inicio">Início</a><a href="#historia" data-v="historia">História</a><a href="#cenario" data-v="cenario">Cenário</a><a href="#guia" data-v="guia">Guia</a><a href="https://claude.ai/artifact/G2wCQSFJJorBEephDTtQ18" target="_blank" rel="noopener">Wiki</a><a href="#equipe" data-v="equipe">Equipe</a></nav></header>
+<main>
+
+<section class="v on" id="inicio">
+<div class="hero"><span class="logo">ZOMBOID2</span></div>
+<p class="k">Um mundo em colapso.</p>
+<h1>A sobrevivência é apenas o começo.</h1>
+<p class="lead">Conheça a história de Mike, explore o mundo de Zomboid2 e descubra como sobreviver aos perigos de um cenário pós-apocalíptico.</p>
+<ul class="idx">
+<li><a href="#historia"><b>História</b><span>Enredo do jogo, ambientado em um apocalipse zumbi.</span></a></li>
+<li><a href="#cenario"><b>Cenário e sobrevivência</b><span>Ambientação pós-apocalíptica e os desafios que Mike precisa enfrentar.</span></a></li>
+<li><a href="#guia"><b>Guia de sobrevivência</b><span>Orientações e estratégias básicas para o jogador se desenvolver no jogo.</span></a></li>
+<li><a href="https://claude.ai/artifact/G2wCQSFJJorBEephDTtQ18" target="_blank" rel="noopener"><b>Wiki</b><span>Consulta sobre armas, mapa, personagens, itens, efeitos, armaduras e easter eggs.</span></a></li>
+<li><a href="#equipe"><b>Equipe</b><span>Apresentação dos integrantes do projeto.</span></a></li>
+</ul></section>
+
+<section class="v" id="historia">
+<h2>História</h2>
+<p class="lead">Em um mundo tomado por infectados, Mike precisa abandonar sua vida solitária e lutar para sobreviver. Durante a fuga, ele conhece Peter, um garoto de 12 anos que se comunica por linguagem de sinais. Juntos, os dois atravessam áreas abandonadas, procuram recursos e descobrem pistas sobre a origem do apocalipse — e sobre o misterioso Dr. Vicentine.</p>
+
+<h3>Fase 1 — O início</h3>
+<p>Mike tem 22 anos, vive sozinho e trabalha em um escritório. Quieto e antissocial, ele não possui amigos nem familiares próximos.</p>
+<p>Em um dia aparentemente comum, algo começa a dar errado. Pessoas correm pelas ruas, carros colidem e gritos ecoam pela cidade. Pela janela do escritório, Mike vê os primeiros infectados.</p>
+<p>Armado apenas com um estilete, ele decide fugir do prédio e atravessar o centro da cidade.</p>
+<h4>Gameplay</h4>
+<p>Durante esta fase, o jogador deverá:</p>
+<ul><li>fugir dos infectados;</li><li>procurar itens úteis;</li><li>aprender os fundamentos do combate;</li><li>administrar a quantidade limitada de vida.</li></ul>
+<p>Ao procurar suprimentos em uma loja de conveniência, Mike encontra Peter, um garoto de 12 anos. Peter não fala e se comunica por meio da linguagem de sinais. Mike consegue entendê-lo porque aprendeu essa linguagem com sua mãe, que era surda.</p>
+<p>Os dois decidem permanecer juntos.</p>
+<h4>Final da fase</h4>
+<p>Mike e Peter conseguem escapar da loja e chegam à casa de Mike.</p>
+
+<h3>Fase 2 — Sobreviventes</h3>
+<p>Na casa de Mike, Peter explica que é órfão e que estava em um orfanato quando o apocalipse começou.</p>
+<p>Mike decide continuar a jornada com o garoto. Os dois passam a procurar comida, água e outros sobreviventes.</p>
+<p>Durante a exploração da região, encontram duas bicicletas no quintal de uma casa abandonada. Eles as pegam e seguem pela estrada.</p>
+<h4>Gameplay</h4>
+<p>Esta fase introduz gradualmente os sistemas de sobrevivência:</p>
+<ul><li>comida e água;</li><li>munição e vida;</li><li>inventário;</li><li>escolhas simples que afetam o uso dos recursos.</li></ul>
+<p class="ex">Exemplo de escolha: Você encontrou uma garrafa de água. [1] Beber [2] Guardar</p>
+<p>Peter também pode ajudar Mike a perceber objetos e itens que passariam despercebidos.</p>
+
+<h3>Fase 3 — A fazenda</h3>
+<p>Depois de percorrer aproximadamente seis quilômetros, Mike e Peter percebem que seus suprimentos estão acabando. Ao anoitecer, param para descansar.</p>
+<p>Tudo parece silencioso: não há carros, pessoas ou infectados à vista.</p>
+<p>Peter percebe algo e sinaliza para Mike ficar em silêncio. Uma enorme horda está passando pela estrada. Os dois se escondem embaixo de um carro.</p>
+<p>Pouco depois, um homem aparece correndo e gritando. Mike pensa em ajudá-lo, mas Peter o segura, impedindo-o de sair do esconderijo. Os dois permanecem escondidos enquanto o homem é alcançado pela horda.</p>
+<p>Depois de horas, os infectados finalmente desaparecem. Mike e Peter seguem para o leste e encontram uma fazenda aparentemente abandonada. Eles entram em busca de comida e água, mas também encontram armas, equipamentos militares e infectados vestindo uniformes militares.</p>
+<p>Cercados, os dois fogem para o andar superior. Durante a fuga, Peter esbarra acidentalmente em um quadro. Um clique é ouvido e uma passagem secreta se abre.</p>
+<h4>O laboratório</h4>
+<p>A passagem leva a um laboratório subterrâneo. Lá, Mike e Peter encontram documentos que revelam fragmentos de uma investigação:</p>
+<blockquote><b>Documento 01</b>“Objeto desconhecido encontrado no Oceano Pacífico.”</blockquote>
+<blockquote><b>Documento 02</b>“Organismo desconhecido encontrado no interior do objeto.”</blockquote>
+<blockquote><b>Documento 03</b>“Paciente apresentou comportamento agressivo após exposição.”</blockquote>
+<p>Eles também encontram uma gravação do Dr. Vicentine. No vídeo, o cientista explica que um meteoro estava sendo estudado e que algo deu errado. Antes que ele consiga concluir a explicação, a gravação é interrompida e um alarme começa a tocar.</p>
+<p>Mike e Peter encontram uma passagem de emergência e escapam por um túnel. Ao sair, descobrem uma moto antiga escondida. Como os equipamentos eletrônicos foram destruídos pelo fenômeno causado pelo impacto do meteoro, a moto ainda funciona.</p>
+<p>Os dois pegam o veículo e seguem pela estrada.</p>
+
+<h3>Fase 4 — A cidade costeira</h3>
+<p>Depois de algum tempo, a moto começa a perder força. Mike percebe que o combustível está acabando, e os dois decidem procurar um posto.</p>
+<p>Durante o caminho, Peter avista o oceano no horizonte. Eles chegaram a uma cidade costeira.</p>
+<p>Animados com a possibilidade de encontrar recursos, entram na cidade em busca de água, comida, munição e combustível.</p>
+<p>Os dois encontram um posto, mas a tranquilidade dura pouco: a mesma horda surge novamente. Mike e Peter correm para dentro do estabelecimento, fecham portas e janelas e se escondem enquanto os infectados passam.</p>
+<p>Durante a espera, Peter encontra um jornal. A manchete chama a atenção de Mike:</p>
+<blockquote>“DR. VICENTINE DESAPARECE APÓS ACIDENTE EM LABORATÓRIO.”</blockquote>
+<p>Mike reconhece o nome do cientista que apareceu na gravação. A descoberta reforça sua suspeita de que Vicentine está diretamente ligado ao apocalipse.</p>
+<h4>A fuga</h4>
+<p>Quando a horda vai embora, Mike e Peter retornam ao local onde haviam deixado a moto, mas encontram apenas destroços. O veículo foi destruído, e os dois precisam continuar a pé.</p>
+<p>Pouco antes de sair da cidade, encontram um pequeno acampamento militar. Depois de enfrentar os infectados que estão no local, descobrem um Jeep 4x4. Eles abastecem o veículo e seguem viagem.</p>
+
+<h3>Fase 5 — O paciente zero</h3>
+<p>Depois de percorrer aproximadamente dez quilômetros, Mike e Peter chegam a uma enorme estátua.</p>
+<p>Tudo fica silencioso.</p>
+<p>Então, o chão começa a tremer. A cada novo impacto, o som fica mais forte. Algo surge por trás da estátua: um infectado mutante de proporções gigantescas.</p>
+<p>Peter percebe a criatura primeiro. Quando Mike olha para ela, reconhece seu rosto.</p>
+<blockquote>Mike: “Vicentine...”</blockquote>
+<p>O cientista se transformou em um monstro.</p>
+<h4>Chefe final — Dr. Vicentine</h4>
+<p>Vicentine possui força extraordinária, pode lançar ataques de ácido, atrair outros infectados e suportar grandes quantidades de dano.</p>
+<h5>Primeira etapa</h5>
+<p>Mike e Peter precisam sobreviver aos ataques de Vicentine e aos infectados que o acompanham, procurando oportunidades para contra-atacar.</p>
+<h5>Segunda etapa</h5>
+<p>Vicentine lança ácido contra Mike. Peter salta à frente dele e é atingido, perdendo o braço esquerdo. Mike fica desesperado e precisa continuar o combate praticamente sozinho.</p>
+<h5>A transformação</h5>
+<p>Vicentine começa a absorver outros infectados. Seu corpo cresce progressivamente: quatro metros, seis metros, oito metros. Ele se transforma em um zumbi colossal.</p>
+<h5>Etapa final</h5>
+<p>Prestes a ser devorado, Mike percebe uma granada. Ele espera o momento certo e a lança dentro da boca do monstro.</p>
+<p>A explosão destrói Vicentine.</p>
+<p>Por alguns instantes, tudo fica em silêncio. Os infectados ao redor começam a cair. Mike percebe que Vicentine era o paciente zero e que, com sua morte, a conexão que mantinha os infectados vivos foi interrompida.</p>
+<h4>Final</h4>
+<p>Mike corre até Peter. Apesar dos ferimentos, o garoto ainda está vivo.</p>
+<p>Os dois começam a caminhar pela estrada. Mike olha para o horizonte, e Peter faz um sinal. Mike entende.</p>
+<p>Eles continuam juntos.</p>
+<p>A tela escurece.</p>
+<blockquote>“O mundo acabou. Mas eles ainda estão vivos.”</blockquote>
+<p class="fim">Fim</p>
+</section>
+
+<section class="v" id="cenario">
+<h2>Cenário e sobrevivência</h2>
+<h3>Apresentação do cenário</h3>
+<p>Zomboid2 se passa em um mundo pós-apocalíptico dominado por zumbis. Após o início do surto, as cidades se tornam perigosas, construções são abandonadas e os sobreviventes precisam procurar recursos para continuar vivos.</p>
+<p>O jogador acompanha Mike e Peter durante uma jornada por diferentes localidades, enfrentando infectados, explorando ambientes e descobrindo pistas sobre a origem do apocalipse.</p>
+<p>O cenário combina exploração, perigo constante e mistérios relacionados a experimentos científicos que saíram do controle.</p>
+<h3>O mundo após o apocalipse</h3>
+<p>O apocalipse transforma o ambiente em um lugar hostil. Ruas, estabelecimentos comerciais e construções abandonadas podem esconder recursos, mas também apresentam riscos.</p>
+<p>Durante a jornada, Mike e Peter precisam encontrar alimentos, água, munição e meios de transporte. A disponibilidade desses recursos influencia a continuidade da viagem.</p>
+<p>Além dos infectados, os protagonistas enfrentam situações que exigem atenção ao ambiente, planejamento e decisões rápidas.</p>
+<h3>Localidades</h3>
+<h4>Cidade inicial</h4>
+<p>A história começa em uma cidade onde Mike presencia o início do apocalipse. Os infectados aparecem nas ruas, obrigando-o a procurar uma maneira de escapar.</p>
+<p>A área urbana representa o primeiro contato do jogador com os perigos do mundo e com a necessidade de encontrar recursos para sobreviver.</p>
+<h4>Loja de conveniência</h4>
+<p>Durante a fuga, Mike encontra uma loja de conveniência. Nesse local, conhece Peter, um garoto de 12 anos que não fala e se comunica por língua de sinais.</p>
+<p>O encontro marca o início da jornada dos dois personagens.</p>
+<h4>Casa de Mike</h4>
+<p>Após encontrarem Peter, os protagonistas seguem para a casa de Mike. O local representa uma pausa inicial na fuga e o começo da adaptação dos personagens à nova realidade.</p>
+<h4>Fazenda abandonada</h4>
+<p>Durante a terceira fase, Mike e Peter chegam a uma fazenda abandonada. O local contém equipamentos militares e infectados usando uniformes militares.</p>
+<p>Ao fugir dos inimigos, os protagonistas descobrem uma passagem secreta escondida atrás de um quadro, que conduz a um laboratório subterrâneo.</p>
+<h4>Laboratório subterrâneo</h4>
+<p>O laboratório é uma das localidades mais importantes para a história. Nele, os protagonistas encontram documentos e uma gravação relacionados a experimentos científicos.</p>
+<p>As informações revelam que um objeto desconhecido encontrado no Oceano Pacífico estava sendo estudado e que um organismo provocou alterações no comportamento de um paciente.</p>
+<p>O local oferece pistas sobre os acontecimentos que levaram ao apocalipse.</p>
+<h4>Cidade costeira</h4>
+<p>Após escapar do laboratório, Mike e Peter utilizam uma motocicleta para continuar a viagem. Quando o combustível começa a acabar, eles chegam a uma cidade costeira em busca de suprimentos.</p>
+<p>Durante a exploração, encontram um posto de gasolina e um jornal que noticia o desaparecimento do Dr. Vicentine após um acidente no laboratório.</p>
+<p>A cidade também é palco do retorno da horda que persegue os protagonistas.</p>
+<h4>Acampamento militar</h4>
+<p>Depois de perderem a motocicleta, Mike e Peter seguem até um acampamento militar. O local está ocupado por infectados, obrigando os personagens a enfrentar novos perigos.</p>
+<p>Durante a exploração, encontram um Jeep 4x4 que permite continuar a jornada.</p>
+<h4>Região da estátua</h4>
+<p>Na última fase, Mike e Peter chegam a uma região onde existe uma enorme estátua. O chão começa a tremer e uma criatura mutante gigantesca emerge.</p>
+<p>É nesse local que ocorre o confronto final contra Dr. Vicentine, revelando sua ligação com a origem do apocalipse.</p>
+<h3>Perigos do ambiente</h3>
+<h4>Infectados</h4>
+<p>Os infectados são uma ameaça constante durante a exploração. Eles aparecem em diferentes localidades e podem impedir o avanço dos protagonistas.</p>
+<h4>Hordas</h4>
+<p>As hordas são grandes grupos de infectados capazes de colocar os personagens em situações extremas. Em um dos acontecimentos da história, Mike e Peter precisam se esconder debaixo de um carro para evitar serem encontrados.</p>
+<h4>Áreas abandonadas</h4>
+<p>Construções abandonadas podem conter recursos e informações importantes, mas também podem esconder infectados e outros perigos.</p>
+<h4>Laboratórios e instalações militares</h4>
+<p>Essas áreas apresentam riscos relacionados aos infectados e aos acontecimentos que antecederam o apocalipse. Também contêm pistas importantes para compreender a história.</p>
+<h4>Criatura mutante</h4>
+<p>O maior perigo aparece na fase final, quando Mike e Peter enfrentam uma criatura colossal associada ao Dr. Vicentine. Ela possui força elevada, resistência e ataques ácidos.</p>
+<h3>Sobrevivência</h3>
+<p>A sobrevivência é um dos principais elementos de Zomboid2. Durante a jornada, os protagonistas precisam procurar recursos e lidar com situações perigosas.</p>
+<h4>Gerenciamento de recursos</h4>
+<p>O roteiro prevê o gerenciamento de diferentes recursos:</p>
+<ul><li><b>Comida:</b> mantimentos necessários para a sobrevivência.</li><li><b>Água:</b> recurso importante durante a exploração.</li><li><b>Munição:</b> utilizada no combate com armas de fogo.</li><li><b>Saúde:</b> condição dos personagens durante os confrontos.</li><li><b>Inventário:</b> espaço destinado à organização dos itens encontrados.</li><li><b>Combustível:</b> necessário para manter os veículos em funcionamento.</li></ul>
+<p>Os valores, limites e efeitos específicos desses recursos serão definidos conforme o desenvolvimento do jogo avançar.</p>
+<h4>Exploração</h4>
+<p>A exploração permite encontrar itens, veículos, documentos e caminhos que ajudam os protagonistas a continuar a viagem.</p>
+<p>Observar o ambiente também é importante para descobrir passagens secretas e pistas relacionadas à história.</p>
+<h4>Transporte</h4>
+<p>Durante a jornada, Mike e Peter encontram bicicletas, uma motocicleta e um Jeep 4x4.</p>
+<p>Cada meio de transporte representa uma possibilidade de deslocamento, mas a motocicleta e o Jeep dependem de combustível para continuar funcionando.</p>
+<h3>A origem do apocalipse</h3>
+<p>A história apresenta pistas de que o apocalipse está relacionado a um objeto desconhecido encontrado no Oceano Pacífico.</p>
+<p>O objeto estava sendo estudado em um laboratório, onde havia um organismo capaz de provocar alterações no comportamento de um paciente exposto a ele.</p>
+<p>Uma gravação do Dr. Vicentine indica que algo deu errado durante os experimentos. Posteriormente, os protagonistas encontram uma notícia sobre o desaparecimento do cientista após um acidente no laboratório.</p>
+<p>No confronto final, Mike reconhece Vicentine como a criatura mutante. Após derrotá-lo, os infectados ao redor caem, revelando a ligação entre o cientista e a continuidade do surto.</p>
+<h3>Objetivo da jornada</h3>
+<p>O objetivo de Mike e Peter é sobreviver em um mundo dominado por infectados, encontrar recursos e descobrir o que provocou o apocalipse.</p>
+<p>Ao longo das cinco fases, os protagonistas passam por diferentes ambientes, enfrentam hordas, descobrem instalações secretas e reúnem informações sobre o Dr. Vicentine.</p>
+<p>A jornada culmina no confronto final, quando Mike derrota a criatura e reencontra Peter após a batalha.</p>
+<p class="fim">O mundo acabou. Mas eles ainda estão vivos.</p>
+</section>
+
+<section class="v" id="guia">
+<h2>Guia de sobrevivência</h2>
+<h3>Introdução</h3>
+<p>Bem-vindo ao guia de sobrevivência de Zomboid2. Em um mundo dominado por zumbis, sobreviver exige atenção, planejamento e cuidado ao explorar ambientes perigosos.</p>
+<p>Durante a jornada, Mike e Peter precisam encontrar recursos, evitar hordas de infectados e descobrir pistas sobre a origem do apocalipse.</p>
+<p>Este guia reúne orientações básicas baseadas nos acontecimentos e nos recursos mencionados no roteiro do jogo.</p>
+<h3>Procure recursos</h3>
+<p>A busca por suprimentos é essencial para continuar a jornada. Durante a exploração, os protagonistas precisam procurar itens que possam ajudá-los a sobreviver.</p>
+<p>Os principais recursos mencionados no roteiro são:</p>
+<ul><li><b>Comida:</b> mantimentos necessários durante a jornada.</li><li><b>Água:</b> recurso importante para a sobrevivência.</li><li><b>Munição:</b> utilizada no combate com armas de fogo.</li><li><b>Combustível:</b> necessário para manter determinados veículos funcionando.</li><li><b>Itens de exploração:</b> objetos que podem ajudar os protagonistas a avançar e descobrir informações.</li></ul>
+<p>Procure explorar os ambientes com atenção e administrar os recursos encontrados, pois a disponibilidade de suprimentos pode diminuir durante a viagem.</p>
+<h3>Cuidado com os infectados</h3>
+<p>Os infectados representam uma ameaça constante. Eles aparecem em diferentes localidades e podem impedir a passagem dos protagonistas.</p>
+<p>Ao encontrar inimigos, observe a situação antes de decidir como agir. Nem todo confronto precisa ser enfrentado diretamente, especialmente quando existe uma grande quantidade de infectados.</p>
+<h4>Como lidar com hordas</h4>
+<p>As hordas são grupos numerosos de infectados e podem representar um risco maior do que inimigos isolados.</p>
+<p>Durante a história, Mike e Peter precisam se esconder debaixo de um carro para evitar serem encontrados por uma horda.</p>
+<p>Esse acontecimento demonstra a importância de observar o ambiente e procurar locais para se esconder quando a fuga ou o combate não forem opções seguras.</p>
+<h3>Explore os ambientes</h3>
+<p>A exploração permite encontrar recursos, veículos, documentos e pistas importantes para a história.</p>
+<p>Durante a jornada, os protagonistas visitam cidades, uma fazenda abandonada, um laboratório subterrâneo e um acampamento militar.</p>
+<p>Ao explorar essas localidades, preste atenção aos objetos e às informações disponíveis. Alguns elementos podem revelar caminhos escondidos ou ajudar a compreender os acontecimentos do apocalipse.</p>
+<h4>Observe objetos suspeitos</h4>
+<p>Na fazenda abandonada, Peter move um quadro acidentalmente e revela uma passagem secreta para um laboratório subterrâneo.</p>
+<p>Esse acontecimento mostra que observar os detalhes do cenário pode ser importante para avançar na história.</p>
+<h3>Gerencie seus recursos</h3>
+<p>O gerenciamento de recursos faz parte da proposta de sobrevivência de Zomboid2.</p>
+<p>Durante a jornada, os protagonistas precisam considerar a quantidade de suprimentos disponíveis e as necessidades para continuar explorando.</p>
+<h4>Saúde</h4>
+<p>A saúde representa a condição do personagem durante a jornada. O roteiro menciona o gerenciamento desse recurso, mas os valores, os métodos de recuperação e as consequências específicas dos danos ainda não foram definidos.</p>
+<h4>Munição</h4>
+<p>A munição é um recurso relacionado ao uso de armas de fogo. Sua disponibilidade deve ser considerada antes de enfrentar inimigos.</p>
+<h4>Inventário</h4>
+<p>O inventário permite organizar os itens encontrados durante a exploração. A capacidade máxima e as regras de armazenamento ainda dependem da implementação do jogo.</p>
+<h4>Combustível</h4>
+<p>O combustível é importante para a utilização de veículos. Durante a história, a motocicleta dos protagonistas fica sem combustível, obrigando-os a buscar alternativas para continuar a viagem.</p>
+<h3>Utilize os veículos com cuidado</h3>
+<p>Durante a jornada, Mike e Peter encontram diferentes meios de transporte.</p>
+<ul><li><b>Bicicletas:</b> encontradas durante a segunda fase.</li><li><b>Motocicleta:</b> utilizada para viajar até a região costeira.</li><li><b>Jeep 4x4:</b> encontrado no acampamento militar após a perda da motocicleta.</li></ul>
+<p>Os veículos ajudam os protagonistas a percorrer diferentes localidades, mas a disponibilidade de combustível pode limitar seu uso.</p>
+<p>Na história, a motocicleta acaba sendo destruída pela horda, levando os personagens a procurar outro meio de transporte.</p>
+<h3>Investigue as pistas</h3>
+<p>A investigação é fundamental para compreender a origem do apocalipse.</p>
+<p>Durante a jornada, os protagonistas encontram documentos, gravações e notícias que revelam informações sobre o Dr. Vicentine e os experimentos realizados no laboratório.</p>
+<h4>Documentos do laboratório</h4>
+<p>Os documentos mencionam um objeto desconhecido encontrado no Oceano Pacífico e um organismo relacionado a alterações no comportamento de um paciente.</p>
+<h4>Gravação do Dr. Vicentine</h4>
+<p>O vídeo encontrado no laboratório apresenta informações sobre as pesquisas realizadas. A gravação é interrompida por um alarme, deixando parte dos acontecimentos sem explicação.</p>
+<h4>Jornal sobre o desaparecimento</h4>
+<p>Na cidade costeira, Peter encontra um jornal com a manchete “DR. VICENTINE DESAPARECE APÓS ACIDENTE EM LABORATÓRIO”.</p>
+<p>A notícia leva Mike a relacionar o cientista aos acontecimentos do apocalipse.</p>
+<h3>Prepare-se para o confronto final</h3>
+<p>O confronto final acontece na região de uma enorme estátua, onde Mike e Peter encontram uma criatura mutante ligada ao Dr. Vicentine.</p>
+<p>A criatura apresenta força elevada, ataques ácidos, resistência considerável e capacidade de atrair ou invocar infectados.</p>
+<p>Durante a batalha, Vicentine absorve outros infectados e aumenta de tamanho até se tornar colossal.</p>
+<p>Mike consegue derrotá-lo utilizando uma granada lançada na boca da criatura. Após a explosão, os infectados ao redor caem.</p>
+<p>Esse confronto representa o encerramento da jornada e a descoberta da ligação entre Vicentine e a continuidade do surto.</p>
+<h3>Dicas gerais de sobrevivência</h3>
+<ul><li>Explore os ambientes com atenção.</li><li>Procure recursos sempre que possível.</li><li>Observe a presença de infectados antes de avançar.</li><li>Evite confrontos desnecessários com grandes grupos.</li><li>Administre a munição e os demais suprimentos.</li><li>Observe objetos que possam esconder passagens ou informações.</li><li>Investigue documentos e gravações para compreender a história.</li><li>Considere a disponibilidade de combustível antes de depender de um veículo.</li></ul>
+<h3>Informações em desenvolvimento</h3>
+<p>Zomboid2 ainda está em desenvolvimento. Algumas mecânicas de sobrevivência poderão ser detalhadas conforme forem implementadas pela equipe.</p>
+<p>As informações que ainda precisam ser definidas incluem:</p>
+<ul><li>Controles e comandos do jogo.</li><li>Quantidade de saúde e formas de recuperação.</li><li>Efeitos específicos da fome e da sede.</li><li>Dano, alcance e funcionamento das armas.</li><li>Capacidade e organização do inventário.</li><li>Funcionamento detalhado dos veículos.</li><li>Regras de combate e comportamento dos infectados.</li></ul>
+<p>Este guia será atualizado conforme novas mecânicas forem confirmadas.</p>
+<p class="fim">Lembre-se: em Zomboid2, sobreviver significa explorar com atenção, administrar os recursos e descobrir os segredos por trás do apocalipse.</p>
+</section>
+
+<section class="v" id="equipe">
+<h2>Membros</h2>
+<p class="lead">Alunos de Jogos Digitais do primeiro semestre da Fatec, responsáveis pelo Zomboid2.</p>
+<ul class="eq">
+<li><div class="ph" role="img" aria-label="Foto de Renan Andrade em breve">RA</div><b>Renan Andrade</b></li>
+<li><div class="ph" role="img" aria-label="Foto de Gustavo Cardoso em breve">GC</div><b>Gustavo Cardoso</b></li>
+<li><div class="ph" role="img" aria-label="Foto de Enzo Cisi em breve">EC</div><b>Enzo Cisi</b></li>
+<li><div class="ph" role="img" aria-label="Foto de Davi Ferreira em breve">DF</div><b>Davi Ferreira</b></li>
+<li><div class="ph" role="img" aria-label="Foto de Guilherme Moia em breve">GM</div><b>Guilherme Moia</b></li>
+<li><div class="ph" role="img" aria-label="Foto de Gustavo Souza em breve">GS</div><b>Gustavo Souza</b></li>
+</ul></section>
+
+</main>
+<footer>Zomboid2, projeto dos alunos de Jogos Digitais do primeiro semestre da Fatec.</footer>
+<script>
+const V=[...document.querySelectorAll(".v")],L=[...document.querySelectorAll("nav a[data-v]")];
+function go(){const h=location.hash.slice(1),id=V.some(v=>v.id===h)?h:"inicio";
+V.forEach(v=>v.classList.toggle("on",v.id===id));
+L.forEach(a=>a.dataset.v===id?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+document.title=(id==="inicio"?"":document.getElementById(id).querySelector("h2").textContent+" · ")+"Zomboid2";scrollTo(0,0)}
+addEventListener("hashchange",go);go();
+</script>
+</body></html>
